@@ -43,9 +43,9 @@ Make sure you have Python 3.12 or higher and `pip` installed.
 
 1.  **Clone the repository:**
 ```bash
-    git clone [https://github.com/Nakajito/bienes_raices.git](https://github.com/Nakajito/bienes_raices.git)
+    git clone https://github.com/Nakajito/bienes_raices.git
     cd bienes_raices
-    ```
+```
 
 2.  **Create a virtual environment:**
 ```bash
@@ -59,14 +59,14 @@ pip install -r requirements.txt
 ```
 
 4.  **Initialize the Reflex application:**
-    ```bash
-    reflex init
-    ```
+```bash
+reflex init
+```
 
 5.  **Run the application in development mode:**
-    ```bash
-    reflex run
-    ```
+```bash
+reflex run
+```
 
 Open your browser and go to `http://localhost:3000` to see the application in action!
 

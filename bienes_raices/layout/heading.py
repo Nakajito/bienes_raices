@@ -15,7 +15,7 @@ def heading() -> rx.Component:
             background_size="cover",
             background_repeat="no-repeat",
             background_position="center",
-            filter="blur(2px)",  # Blur directo a la imagen
+            # filter="blur(1px)",  # Blur directo a la imagen
             transform="scale(1.1)",  # Evita bordes borrosos
             z_index="1",  # Capa de fondo
             alt="Foto de Alex Staudinger: https://www.pexels.com/es-es/foto/sun-piercing-de-la-casa-de-hormigon-marron-cerca-del-mar-1732414/",
