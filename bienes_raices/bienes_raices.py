@@ -16,7 +16,7 @@ def index() -> rx.Component:
         navbar_icons(),
         heading(),
         footer(),
-        bg=COLOR_STYLE["secondary"],
+        bg=COLOR_STYLE["background"],
     )
 
 

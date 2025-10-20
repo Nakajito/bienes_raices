@@ -26,14 +26,14 @@ def heading() -> rx.Component:
                 "Welcome to Real Estate",
                 size="9",
                 weight="bold",
-                color=COLOR_STYLE["secondary"],
+                color=COLOR_STYLE["primary_text"],
                 as_="h1",
                 text_align="right",  # Alinear texto a la derecha
             ),
             rx.text(
                 "Find your dream home with us!",
                 size="8",
-                color=COLOR_STYLE["secondary"],
+                color=COLOR_STYLE["secondary_text"],
                 text_align="right",  # Alinear texto a la derecha
             ),
             rx.link(

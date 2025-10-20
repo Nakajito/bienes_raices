@@ -79,7 +79,7 @@ def navbar_icons() -> rx.Component:
                 align_items="center",
             ),
         ),
-        bg=rx.color("accent", 3),
+        # bg=rx.color("accent", 3),
         padding="1em",
         # position="fixed",
         # top="0px",
