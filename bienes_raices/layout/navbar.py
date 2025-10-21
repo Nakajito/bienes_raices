@@ -1,28 +1,6 @@
 import reflex as rx
 from bienes_raices.styles.styles import COLOR_STYLE
-
-
-def navbar_icons_item(text: str, icon: str, url: str) -> rx.Component:
-    return rx.link(
-        rx.hstack(
-            rx.icon(icon),
-            rx.text(text, size="4", weight="medium"),
-        ),
-        href=url,
-        color=COLOR_STYLE["background"],
-        text_decoration="none",
-        _hover={"color": COLOR_STYLE["secondary"]},
-    )
-
-
-def navbar_icons_menu_item(text: str, icon: str, url: str) -> rx.Component:
-    return rx.link(
-        rx.hstack(
-            rx.icon(icon, size=16),
-            rx.text(text, size="3", weight="medium"),
-        ),
-        href=url,
-    )
+import bienes_raices.components.navbar.navbar as navbar
 
 
 def navbar_icons() -> rx.Component:
@@ -45,9 +23,9 @@ def navbar_icons() -> rx.Component:
                     align_items="center",
                 ),
                 rx.hstack(
-                    navbar_icons_item("Home", "home", "/#"),
-                    navbar_icons_item("Properties", "building", "/#"),
-                    navbar_icons_item("Contact", "mail", "/#"),
+                    navbar.navbar_icons_item("Home", "home", "/#"),
+                    navbar.navbar_icons_item("Properties", "building", "/#"),
+                    navbar.navbar_icons_item("Contact", "mail", "/#"),
                     spacing="6",
                 ),
                 justify="between",
@@ -69,9 +47,9 @@ def navbar_icons() -> rx.Component:
                 rx.menu.root(
                     rx.menu.trigger(rx.icon("menu", size=30)),
                     rx.menu.content(
-                        navbar_icons_menu_item("Home", "home", "/#"),
-                        navbar_icons_menu_item("Properties", "building", "/#"),
-                        navbar_icons_menu_item("Contact", "mail", "/#"),
+                        navbar.navbar_icons_menu_item("Home", "home", "/#"),
+                        navbar.navbar_icons_menu_item("Properties", "building", "/#"),
+                        navbar.navbar_icons_menu_item("Contact", "mail", "/#"),
                     ),
                     justify="end",
                 ),
