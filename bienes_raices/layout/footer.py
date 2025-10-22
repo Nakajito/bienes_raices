@@ -17,7 +17,7 @@ def footer():
         rx.hstack(
             rx.text(
                 f"Todos los derechos reservados © {datetime.datetime.now().year}",
-                color=COLOR_STYLE["primary_text"],
+                color=COLOR_STYLE["background"],
                 weight="bold",
             ),
             width="40%",
@@ -28,7 +28,7 @@ def footer():
             rx.link(
                 rx.text(
                     "Desarrollado por Nakajito",
-                    color=COLOR_STYLE["primary_text"],
+                    color=COLOR_STYLE["background"],
                 ),
                 text_decoration="none",
                 href="https://danielbonilla.vercel.app/",
@@ -42,4 +42,5 @@ def footer():
         justify="between",
         align_items="center",
         height="80px",
+        background_color=COLOR_STYLE["primary"],
     )
