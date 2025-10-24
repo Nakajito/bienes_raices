@@ -8,7 +8,7 @@ def last_properties() -> rx.Component:
     return rx.box(
         rx.heading(
             "Latest Properties",
-            size="6",
+            size="8",
             font_weight="bold",
             margin_y="30px",
             color=COLOR_STYLE["primary_text"],

@@ -1,0 +1,49 @@
+import reflex as rx
+from bienes_raices.styles.styles import COLOR_STYLE
+from bienes_raices.components.testimonial.testimonial_box import testimonial_box
+
+
+def testimonials() -> rx.Component:
+    return rx.box(
+        rx.heading(
+            "Testimonials",
+            size="8",
+            font_weight="bold",
+            margin_y="30px",
+            color=COLOR_STYLE["primary_text"],
+            text_align="center",
+        ),
+        rx.flex(
+            testimonial_box(
+                src="/media/avatars/avatar_01.jpg",
+                alt="John Smith",
+                testimonial="This service was exceptional and helped me find the perfect home!",
+                rate=5,
+                author="Jane Doe",
+            ),
+            testimonial_box(
+                src="/media/avatars/avatar_02.jpg",
+                alt="Emily Johnson",
+                testimonial="A seamless experience from start to finish. Highly recommended!",
+                rate=4,
+                author="Eva Davis",
+            ),
+            testimonial_box(
+                src="/media/avatars/avatar_03.jpg",
+                alt="Michael Brown",
+                testimonial="I couldn't have asked for a better experience. Thank you!",
+                rate=5,
+                author="Michael Brown",
+            ),
+            # Sin arrays - solo valores simples
+            direction="row",
+            wrap="wrap",
+            justify="center",
+            align="stretch",
+            gap="2em",
+            width="100%",
+        ),
+        background_color=COLOR_STYLE["accent"],
+        padding="3em",
+        margin_x="auto",
+    )
