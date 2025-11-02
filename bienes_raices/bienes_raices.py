@@ -5,6 +5,7 @@ from bienes_raices.layout.about import about
 from bienes_raices.layout.footer import footer
 from bienes_raices.layout.last_properties import last_properties
 from bienes_raices.layout.testimonials import testimonials
+from bienes_raices.layout.contact import contact_section
 from bienes_raices.styles.styles import COLOR_STYLE
 from rxconfig import config
 
@@ -21,6 +22,7 @@ def index() -> rx.Component:
         about(),
         last_properties(),
         testimonials(),
+        contact_section(),
         footer(),
         bg=COLOR_STYLE["background"],
     )

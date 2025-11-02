@@ -11,7 +11,7 @@ def testimonials() -> rx.Component:
             font_weight="bold",
             margin_y="30px",
             color=COLOR_STYLE["primary_text"],
-            text_align="center",
+            text_align="left",
         ),
         rx.flex(
             testimonial_box(
