@@ -25,7 +25,7 @@ def navbar_icons() -> rx.Component:
                 rx.hstack(
                     navbar.navbar_icons_item("Home", "home", "/#"),
                     navbar.navbar_icons_item("Properties", "building", "/properties"),
-                    navbar.navbar_icons_item("Contact", "mail", "/#"),
+                    navbar.navbar_icons_item("Contact", "mail", "/contact"),
                     spacing="6",
                 ),
                 justify="between",
@@ -51,7 +51,7 @@ def navbar_icons() -> rx.Component:
                         navbar.navbar_icons_menu_item(
                             "Properties", "building", "/properties"
                         ),
-                        navbar.navbar_icons_menu_item("Contact", "mail", "/#"),
+                        navbar.navbar_icons_menu_item("Contact", "mail", "/contact"),
                     ),
                     justify="end",
                 ),

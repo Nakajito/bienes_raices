@@ -2,6 +2,7 @@ import reflex as rx
 from bienes_raices.styles.styles import COLOR_STYLE
 from bienes_raices.layout.navbar import navbar_icons
 from bienes_raices.components.last_properties.property_card import property_card
+from bienes_raices.layout.footer import footer
 
 
 def properties() -> rx.Component:
@@ -89,6 +90,7 @@ def properties() -> rx.Component:
             gap="2em",
             width="100%",
         ),
+        footer(),
         background_color=COLOR_STYLE["background"],
         margin_x="auto",
     )

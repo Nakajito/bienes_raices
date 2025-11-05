@@ -1,5 +1,6 @@
 import reflex as rx
 from bienes_raices.pages.properties import properties
+from bienes_raices.pages.contact import contact
 from bienes_raices.layout.navbar import navbar_icons
 from bienes_raices.layout.heading import heading
 from bienes_raices.layout.about import about
@@ -33,3 +34,4 @@ def index() -> rx.Component:
 app = rx.App()
 app.add_page(index)
 app.add_page(properties, route="/properties")
+app.add_page(contact, route="/contact")
