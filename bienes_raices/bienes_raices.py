@@ -1,4 +1,5 @@
 import reflex as rx
+from bienes_raices.pages.properties import properties
 from bienes_raices.layout.navbar import navbar_icons
 from bienes_raices.layout.heading import heading
 from bienes_raices.layout.about import about
@@ -7,6 +8,7 @@ from bienes_raices.layout.last_properties import last_properties
 from bienes_raices.layout.testimonials import testimonials
 from bienes_raices.layout.contact import contact_section
 from bienes_raices.styles.styles import COLOR_STYLE
+
 from rxconfig import config
 
 
@@ -30,3 +32,4 @@ def index() -> rx.Component:
 
 app = rx.App()
 app.add_page(index)
+app.add_page(properties, route="/properties")
