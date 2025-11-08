@@ -21,7 +21,7 @@ def mision() -> rx.Component:
         ),
         rx.center(
             rx.image(
-                src="/media/about.jpg",
+                src="/public/media-webp/about-800.webp",
                 alt="Foto de Ketut Subiyanto",
                 margin_bottom="1rem",
                 height="20em",

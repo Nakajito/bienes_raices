@@ -16,8 +16,8 @@ def last_properties() -> rx.Component:
         rx.flex(
             # Propiedad 1
             property_card(
-                image_src="/media/property_01.jpg",
-                image_alt="Foto de Pixabay: https://www.pexels.com/es-es/foto/casa-de-madera-marron-y-blanca-164558/",
+                image_src="/public/media-webp/property_01-400.webp",
+                image_alt="Foto de Pixabay",
                 image_title="House for Sale",
                 price=250000,
                 beds=3,
@@ -27,8 +27,8 @@ def last_properties() -> rx.Component:
             ),
             # Propiedad 2
             property_card(
-                image_src="/media/property_02.jpg",
-                image_alt="Foto de Pixabay: https://www.pexels.com/es-es/foto/casa-de-lujo-con-piscina-1645581/",
+                image_src="/public/media-webp/property_02-400.webp",
+                image_alt="Foto de Pixabay",
                 image_title="Luxury Villa",
                 price=750000,
                 beds=5,
@@ -38,8 +38,8 @@ def last_properties() -> rx.Component:
             ),
             # Propiedad 3
             property_card(
-                image_src="/media/property_03.jpg",
-                image_alt="Foto de Pixabay: https://www.pexels.com/es-es/foto/casa-moderna-de-dos-pisos-1645582/",
+                image_src="/public/media-webp/property_03-400.webp",
+                image_alt="Foto de Pixabay",
                 image_title="Modern Home",
                 price=450000,
                 beds=4,

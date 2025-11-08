@@ -11,14 +11,14 @@ def heading() -> rx.Component:
             left="0",
             width="100%",
             height="100%",
-            background='url("/media/cover.jpg")',
+            background='url("/public/media-webp/cover-1200.webp")',
             background_size="cover",
             background_repeat="no-repeat",
             background_position="center",
             # filter="blur(1px)",  # Blur directo a la imagen
             transform="scale(1.1)",  # Evita bordes borrosos
             z_index="1",  # Capa de fondo
-            alt="Foto de Alex Staudinger: https://www.pexels.com/es-es/foto/sun-piercing-de-la-casa-de-hormigon-marron-cerca-del-mar-1732414/",
+            alt="Foto de Alex Staudinger en Unsplash",
         ),
         # Contenido
         rx.vstack(
