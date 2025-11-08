@@ -24,7 +24,10 @@ def navbar_icons() -> rx.Component:
                 ),
                 rx.hstack(
                     navbar.navbar_icons_item("Home", "home", "/#"),
-                    navbar.navbar_icons_item("Properties", "building", "/properties"),
+                    navbar.navbar_icons_item("About", "badge-info", "/about_page"),
+                    navbar.navbar_icons_item(
+                        "Properties", "map-pin-house", "/properties"
+                    ),
                     navbar.navbar_icons_item("Contact", "mail", "/contact"),
                     spacing="6",
                 ),
@@ -49,7 +52,10 @@ def navbar_icons() -> rx.Component:
                     rx.menu.content(
                         navbar.navbar_icons_menu_item("Home", "home", "/#"),
                         navbar.navbar_icons_menu_item(
-                            "Properties", "building", "/properties"
+                            "About", "badge-info", "/about_page"
+                        ),
+                        navbar.navbar_icons_menu_item(
+                            "Properties", "map-pin-house", "/properties"
                         ),
                         navbar.navbar_icons_menu_item("Contact", "mail", "/contact"),
                     ),

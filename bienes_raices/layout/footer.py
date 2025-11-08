@@ -48,7 +48,7 @@ def footer():
                     ),
                     rx.link(
                         "About Us",
-                        href="/about",
+                        href="/about_page",
                         color="rgba(255, 255, 255, 0.8)",
                         font_size="14px",
                         _hover={"color": "white", "text_decoration": "underline"},
