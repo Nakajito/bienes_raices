@@ -24,6 +24,7 @@ def last_properties() -> rx.Component:
                 baths=2,
                 area_sqft=1500,
                 has_garage=True,
+                property_id="1",
             ),
             # Propiedad 2
             property_card(
@@ -35,6 +36,7 @@ def last_properties() -> rx.Component:
                 baths=4,
                 area_sqft=3500,
                 has_garage=True,
+                property_id="2",
             ),
             # Propiedad 3
             property_card(
@@ -46,6 +48,7 @@ def last_properties() -> rx.Component:
                 baths=3,
                 area_sqft=2500,
                 has_garage=True,
+                property_id="3",
             ),
             # Propiedades del flex
             direction="row",

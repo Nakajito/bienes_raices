@@ -27,6 +27,7 @@ def properties() -> rx.Component:
                 baths=2,
                 area_sqft=1500,
                 has_garage=True,
+                property_id="1",
             ),
             property_card(
                 image_src="/media/property_02.jpg",
@@ -37,6 +38,7 @@ def properties() -> rx.Component:
                 baths=4,
                 area_sqft=3500,
                 has_garage=True,
+                property_id="2",
             ),
             # Propiedad 3
             property_card(
@@ -48,6 +50,7 @@ def properties() -> rx.Component:
                 baths=3,
                 area_sqft=2500,
                 has_garage=True,
+                property_id="3",
             ),
             # Propiedad 4
             property_card(
@@ -59,6 +62,7 @@ def properties() -> rx.Component:
                 baths=1,
                 area_sqft=1200,
                 has_garage=False,
+                property_id="4",
             ),
             # propiedad 5
             property_card(
@@ -70,6 +74,7 @@ def properties() -> rx.Component:
                 baths=2,
                 area_sqft=2000,
                 has_garage=True,
+                property_id="5",
             ),
             # Propiedad 6
             property_card(
@@ -81,6 +86,7 @@ def properties() -> rx.Component:
                 baths=5,
                 area_sqft=3100,
                 has_garage=True,
+                property_id="6",
             ),
             # Propiedades del flex
             direction="row",

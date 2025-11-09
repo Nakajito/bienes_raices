@@ -13,6 +13,7 @@ def property_card(
     baths: int,
     area_sqft: int,
     has_garage: bool,
+    property_id: str = "1",
 ) -> rx.Component:
     """Create a property card component."""
 
@@ -24,34 +25,51 @@ def property_card(
     if has_garage:
         icons.append(property_icon(icon="circle-parking", label="Garage"))
 
-    return rx.box(
-        property_image(
-            image_src=image_src,
-            image_alt=image_alt,
-            image_title=image_title,
-            price=price,
+    return rx.link(
+        rx.box(
+            property_image(
+                image_src=image_src,
+                image_alt=image_alt,
+                image_title=image_title,
+                price=price,
+            ),
+            rx.flex(
+                *icons,
+                spacing="3",
+                justify="center",
+                align="center",
+                width="100%",
+                padding="1em",
+                wrap="wrap",
+                direction="row",
+            ),
+            rx.button(
+                "View Details",
+                size="2",
+                width="100%",
+                background_color=COLOR_STYLE["primary"],
+                color="white",
+                _hover={"background_color": COLOR_STYLE["hover"]},
+            ),
+            padding="1.5em",
+            margin="1em",
+            background_color="white",
+            border_radius="12px",
+            box_shadow="0 4px 6px rgba(0, 0, 0, 0.1)",
+            border="1px solid #e2e8f0",
+            width=rx.breakpoints(initial="100%", md="calc(50% - 1em)", lg="350px"),
+            max_width="400px",
+            min_width="250px",
+            display="flex",
+            flex_direction="column",
+            justify_content="space-between",
+            align_items="center",
+            transition="transform 0.2s, box-shadow 0.2s",
+            _hover={
+                "transform": "translateY(-5px)",
+                "box_shadow": "0 8px 16px rgba(0, 0, 0, 0.15)",
+            },
         ),
-        rx.flex(
-            *icons,
-            spacing="3",
-            justify="center",
-            align="center",
-            width="100%",
-            padding="1em",
-            wrap="wrap",
-            direction="row",
-        ),
-        padding="1.5em",
-        margin="1em",
-        background_color="white",
-        border_radius="12px",
-        box_shadow="0 4px 6px rgba(0, 0, 0, 0.1)",
-        border="1px solid #e2e8f0",
-        width=rx.breakpoints(initial="100%", md="calc(50% - 1em)", lg="350px"),
-        max_width="400px",
-        min_width="250px",
-        display="flex",
-        flex_direction="column",
-        justify_content="space-between",
-        align_items="center",
+        href=f"/property/{property_id}",
+        text_decoration="none",
     )
