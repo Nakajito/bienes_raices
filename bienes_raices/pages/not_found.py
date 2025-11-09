@@ -6,7 +6,11 @@ def not_found() -> rx.Component:
     return rx.center(
         rx.vstack(
             rx.heading(
-                "404", size="9", color=COLOR_STYLE["primary_text"], font_weight="bold"
+                "404",
+                size="9",
+                color=COLOR_STYLE["primary_text"],
+                font_weight="bold",
+                as_="h1",
             ),
             rx.text(
                 "La página que buscas no existe o fue movida.",

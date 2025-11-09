@@ -33,6 +33,7 @@ def property_detail_header(title: str, price: int, status: str) -> rx.Component:
                     size=rx.breakpoints(initial="7", md="8", lg="9"),
                     font_weight="bold",
                     color=COLOR_STYLE["primary_text"],
+                    as_="h1",
                 ),
                 rx.badge(
                     status,
@@ -144,6 +145,7 @@ def property_description_section() -> rx.Component:
                 font_weight="bold",
                 color=COLOR_STYLE["primary_text"],
                 margin_bottom="1em",
+                as_="h2",
             ),
             rx.text(
                 PropertyDetailState.property_description,
@@ -172,6 +174,7 @@ def property_details_section() -> rx.Component:
                 font_weight="bold",
                 color=COLOR_STYLE["primary_text"],
                 margin_bottom="1em",
+                as_="h2",
             ),
             rx.divider(margin_y="0.5em"),
             rx.hstack(
@@ -248,6 +251,7 @@ def contact_agent_section() -> rx.Component:
                 font_weight="bold",
                 color=COLOR_STYLE["primary_text"],
                 margin_bottom="1em",
+                as_="h2",
             ),
             rx.text(
                 "Contact our agents to schedule a viewing or get more information.",

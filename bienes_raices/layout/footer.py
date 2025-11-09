@@ -18,6 +18,7 @@ def footer():
                         color="white",
                         font_weight="bold",
                         margin_bottom="1em",
+                        as_="div",
                     ),
                     rx.text(
                         "Find your dream home with us. We offer the best properties in the market.",

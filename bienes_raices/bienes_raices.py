@@ -37,8 +37,8 @@ def index() -> rx.Component:
 app = rx.App()
 app.add_page(
     index,
-    title="Real Estate - Find Your Dream Home | Buy, Sell & Rent Properties",
-    description="Discover the best real estate properties for sale and rent. We offer expert guidance in buying, selling, and renting homes with over 500 properties, 15 awards, and 200+ satisfied clients.",
+    title="Real Estate - Buy, Sell & Rent Properties",
+    description="Discover the best properties for sale and rent. Expert guidance with 500+ properties, 15 awards, and 200+ satisfied clients.",
     image="/logo_2.png",
     meta=[
         {
@@ -49,11 +49,11 @@ app.add_page(
         {"property": "og:type", "content": "website"},
         {
             "property": "og:title",
-            "content": "Real Estate - Find Your Dream Home | Buy, Sell & Rent Properties",
+            "content": "Real Estate - Buy, Sell & Rent Properties",
         },
         {
             "property": "og:description",
-            "content": "Discover the best real estate properties for sale and rent. Expert guidance with over 500 properties and 200+ satisfied clients.",
+            "content": "Discover the best properties for sale and rent. Expert guidance with 500+ properties and 200+ satisfied clients.",
         },
         {"property": "og:image", "content": "/logo_2.png"},
     ],
@@ -61,8 +61,8 @@ app.add_page(
 app.add_page(
     properties,
     route="/properties",
-    title="Properties for Sale and Rent | Real Estate Listings & Homes",
-    description="Browse our extensive collection of properties including luxury villas, modern homes, cozy cottages, and family houses. Find your perfect property with detailed information on bedrooms, bathrooms, and pricing.",
+    title="Properties for Sale & Rent | Real Estate",
+    description="Browse luxury villas, modern homes, and cozy cottages. Find your perfect property with detailed info on beds, baths, and pricing.",
     image="/logo_2.png",
     meta=[
         {
@@ -72,21 +72,21 @@ app.add_page(
         {"property": "og:type", "content": "website"},
         {
             "property": "og:title",
-            "content": "Properties for Sale and Rent | Real Estate Listings",
+            "content": "Properties for Sale & Rent | Real Estate",
         },
     ],
 )
 app.add_page(
     property_detail,
     route="/property/[id]",
-    title="Property Details | Real Estate - View Property Information",
-    description="View detailed information about this property including price, bedrooms, bathrooms, square footage, and amenities. Contact us to schedule a viewing.",
+    title="Property Details | Real Estate",
+    description="View property details: price, bedrooms, bathrooms, square footage, and amenities. Contact us to schedule a viewing today.",
 )
 app.add_page(
     contact,
     route="/contact",
-    title="Contact Us | Real Estate - Get in Touch with Our Expert Agents",
-    description="Ready to find your dream home? Contact our expert real estate agents today. We're here to help you with buying, selling, or renting properties. Get personalized service and expert guidance.",
+    title="Contact Real Estate Agents | Get Expert Help",
+    description="Contact our expert agents today. We help with buying, selling, and renting properties. Get personalized service now.",
     image="/logo_2.png",
     meta=[
         {
@@ -98,8 +98,8 @@ app.add_page(
 app.add_page(
     about_page,
     route="/about_page",
-    title="About Us | Real Estate - Your Trusted Property Partner Since Years",
-    description="Learn about our experienced team of real estate professionals. With 15 awards, 500+ properties, 300+ homes sold, and 200+ satisfied clients, we're committed to helping you find your perfect property.",
+    title="About Us | Real Estate - Trusted Partner",
+    description="Meet our professional team. 15 awards, 500+ properties, 300+ homes sold, 200+ satisfied clients. Your trusted real estate partner.",
     image="/logo_2.png",
     meta=[
         {
