@@ -101,10 +101,10 @@ def footer():
                     width="100%",
                 ),
                 # Propiedades del flex
-                direction="row",
+                direction=rx.breakpoints(initial="column", lg="row"),
                 wrap="wrap",
-                justify="between",  # Cambio: "space-between" → "between"
-                align="start",  # Cambio: "flex-start" → "start"
+                justify="between",
+                align="start",
                 gap="3em",
                 width="100%",
                 max_width="1200px",
@@ -122,6 +122,7 @@ def footer():
                     f"© {datetime.datetime.now().year} Real Estate. All rights reserved.",
                     color="rgba(255, 255, 255, 0.8)",
                     font_size="14px",
+                    text_align=rx.breakpoints(initial="center", lg="left"),
                 ),
                 rx.link(
                     rx.hstack(
@@ -143,9 +144,9 @@ def footer():
                     text_decoration="none",
                     _hover={"opacity": "0.8"},
                 ),
-                direction="row",
+                direction=rx.breakpoints(initial="column", lg="row"),
                 wrap="wrap",
-                justify="between",  # Cambio: "space-between" → "between"
+                justify=rx.breakpoints(initial="center", lg="between"),
                 align="center",
                 gap="1em",
                 width="100%",

@@ -6,7 +6,7 @@ def mision() -> rx.Component:
     return rx.box(
         rx.heading(
             "Our Mission",
-            size="8",
+            size=rx.breakpoints(initial="6", md="7", lg="8"),
             margin_bottom="1rem",
             color=COLOR_STYLE["primary_text"],
             text_align="center",
@@ -16,7 +16,7 @@ def mision() -> rx.Component:
             font_size="1.2rem",
             line_height="1.6",
             color=COLOR_STYLE["secondary_text"],
-            padding="2em 8em",
+            padding=rx.breakpoints(initial="1em 1em", md="1.5em 3em", lg="2em 8em"),
             text_align="center",
         ),
         rx.center(
@@ -25,6 +25,7 @@ def mision() -> rx.Component:
                 alt="Foto de Ketut Subiyanto",
                 margin_bottom="1rem",
                 height="20em",
+                max_width="100%",
                 border_radius="10px",
             ),
         ),
@@ -33,7 +34,7 @@ def mision() -> rx.Component:
             font_size="1.2rem",
             line_height="1.6",
             color=COLOR_STYLE["secondary_text"],
-            padding="2em 8em",
+            padding=rx.breakpoints(initial="1em 1em", md="1.5em 3em", lg="2em 8em"),
             text_align="center",
         ),
         padding="2rem",

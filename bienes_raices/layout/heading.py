@@ -24,17 +24,17 @@ def heading() -> rx.Component:
         rx.vstack(
             rx.heading(
                 "Welcome to Real Estate",
-                size="9",
+                size=rx.breakpoints(initial="7", md="8", lg="9"),
                 weight="bold",
                 color=COLOR_STYLE["primary_text"],
                 as_="h1",
-                text_align="right",  # Alinear texto a la derecha
+                text_align=rx.breakpoints(initial="center", md="right"),
             ),
             rx.text(
                 "Find your dream home with us!",
-                size="8",
+                size=rx.breakpoints(initial="5", md="6", lg="8"),
                 color=COLOR_STYLE["secondary_text"],
-                text_align="right",  # Alinear texto a la derecha
+                text_align=rx.breakpoints(initial="center", md="right"),
             ),
             rx.link(
                 rx.button(
@@ -42,25 +42,26 @@ def heading() -> rx.Component:
                     background_color=COLOR_STYLE["primary"],
                     color="white",
                     _hover={"background_color": COLOR_STYLE["secondary"]},
-                    size="4",
+                    size=rx.breakpoints(initial="3", lg="4"),
                 ),
                 href="#",
                 text_decoration="none",
             ),
-            justify_content="flex-start",  # Alinear al inicio (arriba)
-            align_items="flex-end",  # Alinear a la derecha
+            justify_content="flex-start",
+            align_items=rx.breakpoints(initial="center", md="flex-end"),
             position="relative",
-            z_index="2",  # Contenido por encima
-            height="100%",  # Ocupa toda la altura disponible
-            spacing="3",  # Espacio entre elementos
-            padding_top="4em",  # Separación desde arriba
+            z_index="2",
+            height="100%",
+            spacing=rx.breakpoints(initial="2", md="3"),
+            padding_top=rx.breakpoints(initial="2em", md="3em", lg="4em"),
+            padding_x=rx.breakpoints(initial="1em", md="2em"),
         ),
         position="relative",
-        padding="2em",
-        padding_bottom="4em",
-        height="100vh",
+        padding=rx.breakpoints(initial="1em", md="2em"),
+        padding_bottom=rx.breakpoints(initial="2em", md="3em", lg="4em"),
+        height=rx.breakpoints(initial="60vh", md="80vh", lg="100vh"),
         overflow="hidden",
         display="flex",
-        align_items="flex-start",  # Alinear al inicio (arriba)
-        justify_content="flex-end",  # Alinear al final (derecha)
+        align_items="flex-start",
+        justify_content=rx.breakpoints(initial="center", md="flex-end"),
     )

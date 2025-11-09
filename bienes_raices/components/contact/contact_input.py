@@ -8,7 +8,7 @@ def contact_input(label: str, type: str) -> rx.Component:
             label,
             font_weight="medium",
             color=COLOR_STYLE["primary_text"],
-            font_size="14px",
+            font_size=["13px", "13px", "14px"],  # Tamaño responsive
             margin_bottom="6px",
         ),
         rx.input(
@@ -20,8 +20,8 @@ def contact_input(label: str, type: str) -> rx.Component:
             border_radius="4px",
             background_color=COLOR_STYLE["background"],
             width="100%",
-            font_size="16px",
-            height="48px",  # Altura estándar para inputs
+            font_size=["15px", "15px", "16px"],  # Tamaño responsive
+            height=["44px", "46px", "48px"],  # Altura responsive
             color=COLOR_STYLE["primary"],
             # Focus state
             _focus={

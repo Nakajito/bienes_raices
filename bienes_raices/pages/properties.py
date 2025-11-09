@@ -11,7 +11,7 @@ def properties() -> rx.Component:
         rx.heading(
             "Properties",
             font_weight="bold",
-            size="8",
+            size=rx.breakpoints(initial="6", md="7", lg="8"),
             margin_y="30px",
             color=COLOR_STYLE["primary_text"],
             text_align="center",
@@ -89,8 +89,10 @@ def properties() -> rx.Component:
             align="stretch",
             gap="2em",
             width="100%",
+            padding="2em",
         ),
         footer(),
         background_color=COLOR_STYLE["background"],
         margin_x="auto",
+        padding_x=rx.breakpoints(initial="0.5em", md="1em"),
     )
