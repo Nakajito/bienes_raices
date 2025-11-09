@@ -1,8 +1,10 @@
 import reflex as rx
+import json
+from pathlib import Path
 from bienes_raices.pages.properties import properties
 from bienes_raices.pages.contact import contact
 from bienes_raices.pages.about import about_page
-from bienes_raices.pages.property_detail import property_detail
+from bienes_raices.pages.property_detail import property_detail, PropertyDetailState
 from bienes_raices.layout.navbar import navbar_icons
 from bienes_raices.layout.heading import heading
 from bienes_raices.layout.about import about
@@ -18,6 +20,23 @@ from rxconfig import config
 
 class State(rx.State):
     """The app state."""
+
+    properties_data: list[dict] = []
+
+    def load_properties(self):
+        """Load properties from JSON file."""
+        data_path = Path(__file__).parent / "utils" / "data.json"
+        try:
+            with open(data_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                self.properties_data = data.get("properties", [])
+        except Exception as e:
+            print(f"Error loading properties: {e}")
+            self.properties_data = []
+
+    def on_load(self):
+        """Called when page loads."""
+        self.load_properties()
 
 
 def index() -> rx.Component:
@@ -81,6 +100,7 @@ app.add_page(
     route="/property/[id]",
     title="Property Details | Real Estate",
     description="View property details: price, bedrooms, bathrooms, square footage, and amenities. Contact us to schedule a viewing today.",
+    on_load=PropertyDetailState.on_load,
 )
 app.add_page(
     contact,

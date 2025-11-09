@@ -18,7 +18,7 @@ def property_image(
         ),
         rx.hstack(
             rx.text(
-                f"{image_title} $ {price:,.2f}",
+                f"{image_title}",
                 font_weight="semibold",
                 color=COLOR_STYLE["secondary_text"],
                 font_size="16px",
@@ -26,7 +26,19 @@ def property_image(
             text_align="center",
             display="row",
             justify_content="center",
-            margin_y="10px",
+            margin_y="5px",
+        ),
+        rx.hstack(
+            rx.text(
+                f"${price:,.0f}",
+                font_weight="bold",
+                color=COLOR_STYLE["primary"],
+                font_size="18px",
+            ),
+            text_align="center",
+            display="row",
+            justify_content="center",
+            margin_y="5px",
         ),
         width="100%",
         display="flex",
