@@ -6,18 +6,19 @@ from bienes_raices.components.last_properties.property_card import property_card
 def last_properties() -> rx.Component:
     return rx.box(
         rx.heading(
-            "Latest Properties",
+            "Featured Properties - Latest Listings for Sale and Rent",
             size=rx.breakpoints(initial="6", md="7", lg="8"),
             font_weight="bold",
             margin_y="30px",
             color=COLOR_STYLE["primary_text"],
             text_align="center",
+            as_="h2",
         ),
         rx.flex(
             # Propiedad 1
             property_card(
                 image_src="/public/media-webp/property_01-400.webp",
-                image_alt="Foto de Pixabay",
+                image_alt="Beautiful wooden brown and white house with garden - Photo from Pixabay",
                 image_title="House for Sale",
                 price=250000,
                 beds=3,
@@ -29,7 +30,7 @@ def last_properties() -> rx.Component:
             # Propiedad 2
             property_card(
                 image_src="/public/media-webp/property_02-400.webp",
-                image_alt="Foto de Pixabay",
+                image_alt="Luxury villa with swimming pool and modern architecture - Photo from Pixabay",
                 image_title="Luxury Villa",
                 price=750000,
                 beds=5,
@@ -41,7 +42,7 @@ def last_properties() -> rx.Component:
             # Propiedad 3
             property_card(
                 image_src="/public/media-webp/property_03-400.webp",
-                image_alt="Foto de Pixabay",
+                image_alt="Modern two-story home with contemporary design - Photo from Pixabay",
                 image_title="Modern Home",
                 price=450000,
                 beds=4,
@@ -63,5 +64,4 @@ def last_properties() -> rx.Component:
         padding="3em",
         padding_x=rx.breakpoints(initial="1em", md="2em", lg="3em"),
         margin_x="auto",
-        # max_width="1200px",
     )

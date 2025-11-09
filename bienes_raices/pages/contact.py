@@ -12,11 +12,12 @@ def contact() -> rx.Component:
             # Encabezado de la sección
             rx.vstack(
                 rx.heading(
-                    "Contact Us",
+                    "Contact Our Expert Real Estate Agents Today",
                     size=rx.breakpoints(initial="6", md="7", lg="8"),
                     font_weight="bold",
                     color=COLOR_STYLE["primary_text"],
                     text_align="center",
+                    as_="h1",
                 ),
                 rx.text(
                     "Ready to find your dream home? Contact us today and one of our expert agents will help you get started on your journey.",

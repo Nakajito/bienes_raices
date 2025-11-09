@@ -4,7 +4,6 @@ from bienes_raices.styles.styles import COLOR_STYLE
 
 def heading() -> rx.Component:
     return rx.box(
-        # Imagen de fondo con blur directo
         rx.box(
             position="absolute",
             top="0",
@@ -15,15 +14,15 @@ def heading() -> rx.Component:
             background_size="cover",
             background_repeat="no-repeat",
             background_position="center",
-            # filter="blur(1px)",  # Blur directo a la imagen
             transform="scale(1.1)",  # Evita bordes borrosos
             z_index="1",  # Capa de fondo
-            alt="Foto de Alex Staudinger en Unsplash",
+            role="img",
+            aria_label="Modern real estate property exterior - Photo by Alex Staudinger on Unsplash",
         ),
         # Contenido
         rx.vstack(
             rx.heading(
-                "Welcome to Real Estate",
+                "Discover Your Perfect Home with Real Estate Experts",
                 size=rx.breakpoints(initial="7", md="8", lg="9"),
                 weight="bold",
                 color=COLOR_STYLE["primary_text"],
@@ -31,21 +30,22 @@ def heading() -> rx.Component:
                 text_align=rx.breakpoints(initial="center", md="right"),
             ),
             rx.text(
-                "Find your dream home with us!",
+                "Find your dream home with us! Professional guidance for buying, selling, and renting properties",
                 size=rx.breakpoints(initial="5", md="6", lg="8"),
                 color=COLOR_STYLE["secondary_text"],
                 text_align=rx.breakpoints(initial="center", md="right"),
             ),
             rx.link(
                 rx.button(
-                    "Get Started",
+                    "Get Started - Browse Properties",
                     background_color=COLOR_STYLE["primary"],
                     color="white",
                     _hover={"background_color": COLOR_STYLE["secondary"]},
                     size=rx.breakpoints(initial="3", lg="4"),
                 ),
-                href="#",
+                href="/properties",
                 text_decoration="none",
+                aria_label="Browse our available properties",
             ),
             justify_content="flex-start",
             align_items=rx.breakpoints(initial="center", md="flex-end"),

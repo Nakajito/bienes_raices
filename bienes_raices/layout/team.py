@@ -6,15 +6,16 @@ from bienes_raices.components.team.team_box import team_box
 def team() -> rx.Component:
     return rx.box(
         rx.heading(
-            "Our Team",
+            "Meet Our Expert Real Estate Team",
             color=COLOR_STYLE["background"],
             padding_y="2em",
             text_align="center",
             size=rx.breakpoints(initial="6", md="7", lg="8"),
+            as_="h2",
         ),
         rx.vstack(
             rx.heading(
-                "Meet our dedicated team of professionals who are here to help you find your dream home.",
+                "Our dedicated team of professionals is here to help you find your dream home and make your real estate goals a reality",
                 color=COLOR_STYLE["background"],
                 padding_y="1em",
                 padding_x=rx.breakpoints(initial="1em", md="2em", lg="3em"),
@@ -22,29 +23,30 @@ def team() -> rx.Component:
                 size=rx.breakpoints(initial="4", md="5", lg="6"),
                 font_weight="normal",
                 line_height="1.6",
+                as_="h3",
             ),
             rx.flex(
                 team_box(
                     src="/public/media-webp/avatars/avatar_01-400.webp",
-                    alt="Jane Doe",
+                    alt="Professional portrait of Jane Doe, CEO of Real Estate company",
                     position="CEO",
                     name="Jane Doe",
                 ),
                 team_box(
                     src="/public/media-webp/avatars/avatar_03-400.webp",
-                    alt="John Smith",
+                    alt="Professional portrait of John Smith, Chief Technology Officer",
                     position="CTO",
                     name="John Smith",
                 ),
                 team_box(
                     src="/public/media-webp/avatars/avatar_02-400.webp",
-                    alt="Emily Johnson",
+                    alt="Professional portrait of Emily Johnson, Chief Financial Officer",
                     position="CFO",
                     name="Emily Johnson",
                 ),
                 team_box(
                     src="/public/media-webp/avatars/avatar_04-400.webp",
-                    alt="Michael Brown",
+                    alt="Professional portrait of Michael Brown, Chief Operating Officer",
                     position="COO",
                     name="Michael Brown",
                 ),
@@ -57,7 +59,10 @@ def team() -> rx.Component:
                 padding="2em",
             ),
             rx.text(
-                "Our team is committed to providing exceptional service and expertise in the real estate market.",
+                "Our team is committed to providing exceptional service and expertise in the real estate market. "
+                "With combined decades of experience, we bring deep market knowledge, professional integrity, "
+                "and a client-first approach to every transaction. We stay ahead of market trends and leverage "
+                "the latest technology to ensure you receive the best possible service.",
                 color=COLOR_STYLE["background"],
                 padding_y="2em",
                 padding_x=rx.breakpoints(initial="1em", md="2em", lg="3em"),

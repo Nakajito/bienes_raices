@@ -7,20 +7,26 @@ def navbar_icons() -> rx.Component:
     return rx.box(
         rx.desktop_only(
             rx.hstack(
-                rx.hstack(
-                    rx.image(
-                        src="/logo_2.svg",
-                        width="2.25em",
-                        height="auto",
-                        border_radius="25%",
+                rx.link(
+                    rx.hstack(
+                        rx.image(
+                            src="/logo_2.svg",
+                            width="2.25em",
+                            height="auto",
+                            border_radius="25%",
+                            alt="Real Estate company logo",
+                        ),
+                        rx.heading(
+                            "Real Estate",
+                            size="7",
+                            weight="bold",
+                            color=COLOR_STYLE["background"],
+                        ),
+                        align_items="center",
                     ),
-                    rx.heading(
-                        "Real Estate",
-                        size="7",
-                        weight="bold",
-                        color=COLOR_STYLE["background"],
-                    ),
-                    align_items="center",
+                    href="/#",
+                    text_decoration="none",
+                    aria_label="Real Estate - Go to homepage",
                 ),
                 rx.hstack(
                     navbar.navbar_icons_item("Home", "home", "/#"),
@@ -37,18 +43,26 @@ def navbar_icons() -> rx.Component:
         ),
         rx.mobile_and_tablet(
             rx.hstack(
-                rx.hstack(
-                    rx.image(
-                        src="/logo_2.svg",
-                        width="2em",
-                        height="auto",
-                        border_radius="25%",
+                rx.link(
+                    rx.hstack(
+                        rx.image(
+                            src="/logo_2.svg",
+                            width="2em",
+                            height="auto",
+                            border_radius="25%",
+                            alt="Real Estate company logo",
+                        ),
+                        rx.heading("Real Estate", size="6", weight="bold"),
+                        align_items="center",
                     ),
-                    rx.heading("Real Estate", size="6", weight="bold"),
-                    align_items="center",
+                    href="/#",
+                    text_decoration="none",
+                    aria_label="Real Estate - Go to homepage",
                 ),
                 rx.menu.root(
-                    rx.menu.trigger(rx.icon("menu", size=30)),
+                    rx.menu.trigger(
+                        rx.icon("menu", size=30), aria_label="Open navigation menu"
+                    ),
                     rx.menu.content(
                         navbar.navbar_icons_menu_item("Home", "home", "/#"),
                         navbar.navbar_icons_menu_item(

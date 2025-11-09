@@ -72,4 +72,5 @@ def property_card(
         ),
         href=f"/property/{property_id}",
         text_decoration="none",
+        aria_label=f"View details for {image_title} - ${price:,}",
     )

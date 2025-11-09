@@ -3,7 +3,7 @@ from bienes_raices.styles.styles import COLOR_STYLE
 
 
 def property_image(
-    image_src: str, image_alt: str, image_title: str, price: int
+    image_src: str, image_alt: str, image_title: str, price: float
 ) -> rx.Component:
     return rx.box(
         rx.image(

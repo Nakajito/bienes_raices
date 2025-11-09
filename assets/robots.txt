@@ -1,0 +1,34 @@
+# robots.txt for Real Estate Website
+
+# Allow all search engines to crawl the entire site
+User-agent: *
+Allow: /
+
+# Disallow crawling of admin or private areas (if any in the future)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_next/
+Disallow: /api/
+
+# Disallow 404 page from being indexed
+Disallow: /404
+
+# Allow crawling of CSS and JS files for better rendering in search results
+Allow: /*.css
+Allow: /*.js
+
+# Sitemap location
+Sitemap: https://bienes-raices-teal-orca.reflex.run//sitemap.xml
+
+# Crawl-delay (optional, only if needed to prevent server overload)
+# Crawl-delay: 1
+
+# Specific rules for major search engines (optional)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /

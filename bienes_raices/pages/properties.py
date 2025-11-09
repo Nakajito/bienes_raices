@@ -9,12 +9,13 @@ def properties() -> rx.Component:
     return rx.box(
         navbar_icons(),
         rx.heading(
-            "Properties",
+            "Explore All Available Properties for Sale and Rent",
             font_weight="bold",
             size=rx.breakpoints(initial="6", md="7", lg="8"),
             margin_y="30px",
             color=COLOR_STYLE["primary_text"],
             text_align="center",
+            as_="h1",
         ),
         rx.flex(
             # Aquí puedes agregar múltiples property_card() para mostrar las propiedades
